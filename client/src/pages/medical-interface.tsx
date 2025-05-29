@@ -173,7 +173,7 @@ export default function MedicalInterface() {
             <img 
               src={documentsIcon}
               alt=""
-              className="absolute inset-0 w-full h-full object-contain opacity-10"
+              className="absolute bottom-1 right-1 w-6 h-6 object-contain opacity-10"
             />
           </div>
           <div className="w-28 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1"></div>
