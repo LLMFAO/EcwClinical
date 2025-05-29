@@ -6,6 +6,7 @@ import { MedicalContent } from "@/components/ui/medical-content";
 import { MedicalBottomMenu } from "@/components/ui/medical-bottom-menu";
 import { apiRequest } from "@/lib/queryClient";
 import type { MedicalDocument, ClipboardSync } from "@shared/schema";
+import documentsIcon from "@assets/documents.png";
 
 export default function MedicalInterface() {
   const [activeTab, setActiveTab] = useState('progress_note');
@@ -168,7 +169,13 @@ export default function MedicalInterface() {
         
         {/* Sticky Notes */}
         <div className="flex space-x-1 mr-12">
-          <div className="w-28 h-24 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1"></div>
+          <div className="w-28 h-24 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1 relative">
+            <img 
+              src={documentsIcon}
+              alt=""
+              className="absolute inset-0 w-full h-full object-contain opacity-10"
+            />
+          </div>
           <div className="w-28 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1"></div>
           <div className="w-28 h-24 bg-blue-200 border border-blue-300 rounded shadow-sm p-1"></div>
           <div className="w-28 h-24 bg-pink-200 border border-pink-300 rounded shadow-sm p-1"></div>
