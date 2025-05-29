@@ -137,7 +137,7 @@ export default function MedicalInterface() {
       <MedicalHeader />
       
       {/* Patient Info Header */}
-      <div className="bg-blue-100 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+      <div className="bg-blue-100 px-1 py-2 border-b border-gray-200 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           {/* Patient Photo */}
           <div className="w-16 h-16 bg-gray-300 rounded border-2 border-gray-400 flex items-center justify-center">
