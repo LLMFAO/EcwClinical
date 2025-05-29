@@ -1,4 +1,5 @@
-import { Menu, User, RotateCcw } from "lucide-react";
+import { Menu, User, RotateCcw, Search } from "lucide-react";
+import searchUserIcon from "@assets/search-user.png";
 
 export function MedicalHeader() {
   return (
@@ -32,9 +33,11 @@ export function MedicalHeader() {
         className="flex items-center justify-center px-3 py-1 rounded-sm ml-4 cursor-pointer"
         style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
       >
-        <User 
-          className="w-4 h-4" 
-          style={{ color: 'hsl(var(--patient-lookup-icon))' }}
+        <img 
+          src={searchUserIcon}
+          alt="Patient Search"
+          className="w-4 h-4 filter brightness-0"
+          style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(1076%) hue-rotate(183deg) brightness(95%) contrast(96%)' }}
         />
       </div>
       
