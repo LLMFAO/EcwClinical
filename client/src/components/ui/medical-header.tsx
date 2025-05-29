@@ -36,7 +36,7 @@ export function MedicalHeader() {
         <img 
           src={searchUserIcon}
           alt="Patient Search"
-          className="w-4 h-4 filter brightness-0"
+          className="w-6 h-6 filter brightness-0"
           style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(1076%) hue-rotate(183deg) brightness(95%) contrast(96%)' }}
         />
       </div>
