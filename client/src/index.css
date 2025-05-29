@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Medical Interface Colors */
+  --header-primary: 197 68% 52%; /* #35a8cd */
+  --header-gradient-start: 197 52% 32%; /* #23677d */
+  --header-gradient-end: 197 58% 24%; /* #1f4c64 */
+  --user-circle-text: 142 20% 55%; /* #85af98 */
+  --user-circle-bg: 140 52% 94%; /* #e8f6ec */
+  --patient-lookup-bg: 202 81% 91%; /* #d4eaf9 */
+  --patient-lookup-icon: 204 31% 17%; /* #19293c */
+  --status-center: 8 81% 43%; /* #be2d1a */
+  --status-border: 101 53% 69%; /* #91dc6a */
+  --tab-active-bg: 206 58% 72%; /* #93c4e5 */
+  --tab-active-text: 205 27% 47%; /* #476d82 */
+  --tab-inactive-bg: 184 86% 97%; /* #f1fcfe */
+  --tab-inactive-text: 184 44% 29%; /* #29616e */
+  --section-header: 9 79% 42%; /* #c22910 */
+  --arrow-icon: 66 22% 65%; /* #b9bd8f */
+  --arrow-border: 60 4% 46%; /* #757772 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Medical Interface Specific Styles */
+.medical-header-gradient {
+  background: linear-gradient(90deg, hsl(var(--header-gradient-start)), hsl(var(--header-gradient-end)));
+}
+
+.jelly-button {
+  @apply rounded-full px-3 py-1 text-xs bg-white/20 text-white cursor-pointer hover:bg-white/30 transition-colors;
+}
+
+.status-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(var(--status-center));
+  border: 3px solid hsl(var(--status-border));
+}
+
+.medical-textarea {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 500px;
+}
+
+.section-header {
+  color: hsl(var(--section-header));
+  font-weight: bold;
+}
+
+.section-arrow {
+  color: hsl(var(--arrow-icon));
+  border: 1px solid hsl(var(--arrow-border));
+  padding: 2px 4px;
+  font-size: 10px;
+  border-radius: 2px;
+  margin-left: 4px;
+}
