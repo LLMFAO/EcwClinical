@@ -137,10 +137,43 @@ export default function MedicalInterface() {
       <MedicalHeader />
       
       {/* Patient Info Header */}
-      <div className="bg-blue-100 px-4 py-2 text-sm border-b border-gray-200">
-        <span className="text-blue-800 font-medium">{patientInfo.name}</span>
-        <span className="text-gray-600 ml-4">{patientInfo.dob}</span>
-        <span className="text-gray-600 ml-4">Acc. No. {patientInfo.accNo}</span>
+      <div className="bg-blue-100 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          {/* Patient Photo */}
+          <div className="w-16 h-16 bg-gray-300 rounded border-2 border-gray-400 flex items-center justify-center">
+            <div className="w-8 h-8 bg-gray-400 rounded-full"></div>
+          </div>
+          
+          {/* Patient Info */}
+          <div className="flex flex-col text-sm">
+            <div className="flex items-center space-x-2 mb-1">
+              <span className="text-blue-800 font-medium">{patientInfo.name}</span>
+              <span className="text-gray-600">33 yo</span>
+              <span className="text-gray-600">M</span>
+              <span className="bg-red-500 text-white px-2 py-0.5 text-xs rounded">INFO</span>
+              <span className="bg-red-600 text-white px-2 py-0.5 text-xs rounded">ALLERGY</span>
+            </div>
+            <div className="text-gray-600 mb-1">
+              <span>{patientInfo.dob}</span>
+              <span className="mx-2">|</span>
+              <span>(123) 456-7890</span>
+            </div>
+            <div className="text-gray-600 mb-1">
+              <span>test@email.com</span>
+            </div>
+            <div className="text-gray-700">
+              <span className="font-medium">Allergies:</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Sticky Notes */}
+        <div className="flex space-x-2">
+          <div className="w-16 h-12 bg-yellow-200 border border-yellow-300 rounded shadow-sm"></div>
+          <div className="w-16 h-12 bg-green-200 border border-green-300 rounded shadow-sm"></div>
+          <div className="w-16 h-12 bg-blue-200 border border-blue-300 rounded shadow-sm"></div>
+          <div className="w-16 h-12 bg-pink-200 border border-pink-300 rounded shadow-sm"></div>
+        </div>
       </div>
       
       <MedicalTabs
