@@ -52,8 +52,8 @@ export function MedicalHeader() {
         <button className="jelly-button">
           <RotateCcw className="w-3 h-3" />
         </button>
-        <button className="jelly-button">P₂</button>
-        <button className="jelly-button">N₀</button>
+        <button className="jelly-button">P<sub>2</sub></button>
+        <button className="jelly-button">N<sub>0</sub></button>
       </div>
     </header>
   );
