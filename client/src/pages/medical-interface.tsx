@@ -135,6 +135,14 @@ export default function MedicalInterface() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <MedicalHeader />
+      
+      {/* Patient Info Header */}
+      <div className="bg-blue-100 px-4 py-2 text-sm border-b border-gray-200">
+        <span className="text-blue-800 font-medium">{patientInfo.name}</span>
+        <span className="text-gray-600 ml-4">{patientInfo.dob}</span>
+        <span className="text-gray-600 ml-4">Acc. No. {patientInfo.accNo}</span>
+      </div>
+      
       <MedicalTabs
         activeTab={activeTab}
         onTabChange={setActiveTab}

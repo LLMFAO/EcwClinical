@@ -114,13 +114,6 @@ export function MedicalContent({ content, onContentChange, patientInfo }: Medica
 
   return (
     <div className="flex-1 p-4">
-      {/* Patient Info Header */}
-      <div className="bg-blue-100 px-4 py-2 text-sm mb-4 rounded">
-        <span className="text-blue-800 font-medium">{patientInfo.name}</span>
-        <span className="text-gray-600 ml-4">{patientInfo.dob} ({patientInfo.gender})</span>
-        <span className="text-gray-600 ml-4">Acc. No. {patientInfo.accNo}</span>
-      </div>
-
       {/* Content Area */}
       <div className="bg-white rounded border border-gray-200">
         <textarea
