@@ -23,7 +23,7 @@ export function MedicalHeader() {
       </div>
       
       {/* eClinicalWorks Logo */}
-      <div className="text-white font-semibold text-sm ml-3">
+      <div className="text-white font-semibold text-base ml-3 italic">
         eClinicalWorks
       </div>
       
