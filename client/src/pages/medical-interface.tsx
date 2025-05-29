@@ -177,7 +177,7 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-28 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1"></div>
-          <div className="w-28 h-24 bg-blue-200 border border-blue-300 rounded shadow-sm p-1"></div>
+          <div className="w-28 h-24 bg-blue-200 border border-blue-300 rounded shadow-sm p-1 text-[#d8e5a9]"></div>
           <div className="w-28 h-24 bg-pink-200 border border-pink-300 rounded shadow-sm p-1"></div>
         </div>
       </div>
