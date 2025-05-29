@@ -168,11 +168,11 @@ export default function MedicalInterface() {
         </div>
         
         {/* Sticky Notes */}
-        <div className="flex space-x-2">
-          <div className="w-16 h-12 bg-yellow-200 border border-yellow-300 rounded shadow-sm"></div>
-          <div className="w-16 h-12 bg-green-200 border border-green-300 rounded shadow-sm"></div>
-          <div className="w-16 h-12 bg-blue-200 border border-blue-300 rounded shadow-sm"></div>
-          <div className="w-16 h-12 bg-pink-200 border border-pink-300 rounded shadow-sm"></div>
+        <div className="flex space-x-1">
+          <div className="w-20 h-16 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1"></div>
+          <div className="w-20 h-16 bg-green-200 border border-green-300 rounded shadow-sm p-1"></div>
+          <div className="w-20 h-16 bg-blue-200 border border-blue-300 rounded shadow-sm p-1"></div>
+          <div className="w-20 h-16 bg-pink-200 border border-pink-300 rounded shadow-sm p-1"></div>
         </div>
       </div>
       
