@@ -10,7 +10,7 @@ import documentsIcon from "@assets/documents.png";
 import dollarIcon from "@assets/dollar-symbol.png";
 import penIcon from "@assets/pen.png";
 import lockIcon from "@assets/lock.png";
-import { Calendar, Phone, Mail } from "lucide-react";
+import { Calendar, Phone, Mail, ChevronDown } from "lucide-react";
 
 export default function MedicalInterface() {
   const [activeTab, setActiveTab] = useState('progress_note');
@@ -226,10 +226,13 @@ export default function MedicalInterface() {
           <a
             key={index}
             href="#"
-            className="text-white text-sm hover:text-white visited:text-white no-underline"
+            className="text-white text-sm hover:text-white visited:text-white no-underline flex items-center"
             style={{ color: 'white' }}
           >
             {link}
+            {(link === 'Patient Docs' || link === 'Flowsheets') && (
+              <ChevronDown size={12} className="ml-1 text-white" />
+            )}
           </a>
         ))}
       </div>
