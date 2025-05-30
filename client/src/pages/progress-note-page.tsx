@@ -144,21 +144,73 @@ ASSESSMENT AND PLAN:
       );
     }
 
-    // Show editable content
+    // Show populated content with mixed formatting
+    const lines = content.split('\n');
     return (
-      <textarea
-        value={content}
-        onChange={(e) => onContentChange(e.target.value)}
-        className="w-full h-full min-h-[600px] border-none outline-none resize-none font-mono text-sm leading-relaxed p-4 bg-white"
-        placeholder="Enter your medical notes here..."
-        style={{
-          fontFamily: 'Consolas, Monaco, "Courier New", monospace',
-          lineHeight: '1.6',
-          border: 'none',
-          outline: 'none',
-          background: 'transparent'
-        }}
-      />
+      <div className="p-4 min-h-[600px]">
+        {lines.map((line, index) => {
+          if (line.trim() === '') {
+            return <div key={index} className="h-4"></div>;
+          }
+          
+          const isParentSection = !line.startsWith(' ') && line.trim() !== '';
+          const isChildSection = line.startsWith(' ') && !line.startsWith('  ') && line.trim() !== '';
+          const isDataContent = line.startsWith('  ') && line.trim() !== '';
+          
+          if (isParentSection) {
+            return (
+              <div 
+                key={index} 
+                className="text-black font-black"
+                style={{
+                  fontFamily: 'Arial Black, Arial, sans-serif',
+                  fontWeight: 900,
+                  WebkitFontSmoothing: 'none',
+                  MozOsxFontSmoothing: 'unset'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          } else if (isChildSection) {
+            return (
+              <div 
+                key={index} 
+                className="text-[#d46c23] font-black ml-4"
+                style={{
+                  fontFamily: 'Arial Black, Arial, sans-serif',
+                  fontWeight: 900,
+                  WebkitFontSmoothing: 'none',
+                  MozOsxFontSmoothing: 'unset'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          } else if (isDataContent) {
+            return (
+              <div 
+                key={index} 
+                className="text-black ml-8"
+                style={{
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 'normal',
+                  WebkitFontSmoothing: 'none',
+                  MozOsxFontSmoothing: 'unset'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          } else {
+            return (
+              <div key={index} className="text-black">
+                {line}
+              </div>
+            );
+          }
+        })}
+      </div>
     );
   };
 
