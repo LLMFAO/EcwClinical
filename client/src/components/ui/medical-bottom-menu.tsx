@@ -42,24 +42,20 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
 
   return (
     <div className="bg-gray-100 border-t border-gray-300 px-2 py-1 flex items-center justify-between text-xs fixed bottom-0 left-0 right-0 z-50">
-      <div className="flex items-center">
-        {menuItems.map((item, index) => (
-          <div key={item.id} className="flex items-center">
-            {index > 0 && <span className="text-gray-400 mx-1">|</span>}
-            <button
-              className="text-black hover:bg-gray-200 px-1 py-0 text-xs border-0 bg-transparent flex items-center"
-              onClick={() => onMenuAction(item.id)}
-              style={{ 
-                border: 'none',
-                background: 'none',
-                padding: '1px 4px',
-                margin: '0'
-              }}
-            >
-              {item.label}
-              <Triangle className="w-3 h-3 text-black ml-1 fill-current" style={{ transform: 'rotate(0deg)' }} />
-            </button>
-          </div>
+      <div className="flex items-center space-x-1">
+        {menuItems.map((item) => (
+          <button
+            key={item.id}
+            className="text-black hover:bg-gray-200 px-2 py-1 text-xs border border-gray-300 bg-white flex items-center rounded-sm"
+            onClick={() => onMenuAction(item.id)}
+            style={{ 
+              padding: '2px 6px',
+              margin: '0 1px'
+            }}
+          >
+            {item.label}
+            <Triangle className="w-2 h-2 text-black ml-1 fill-current" style={{ transform: 'rotate(0deg)' }} />
+          </button>
         ))}
       </div>
       
