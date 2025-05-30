@@ -46,7 +46,7 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
           <div key={item.id} className="flex items-center">
             {index > 0 && <span className="text-gray-400 mx-1">|</span>}
             <button
-              className="text-black hover:bg-gray-200 px-1 py-0 text-xs border-0 bg-transparent"
+              className="text-black hover:bg-gray-200 px-1 py-0 text-xs border-0 bg-transparent flex items-center"
               onClick={() => onMenuAction(item.id)}
               style={{ 
                 border: 'none',
@@ -56,6 +56,7 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
               }}
             >
               {item.label}
+              <ChevronUp className="w-3 h-3 text-black ml-1" />
             </button>
           </div>
         ))}
