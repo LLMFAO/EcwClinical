@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search } from 'lucide-react';
 import gemIcon from "@assets/gem.png";
+import additionalIcon from "@assets/image_1748577102898.png";
 
 interface ProgressNotePageProps {
   content: string;
@@ -116,11 +117,23 @@ ASSESSMENT AND PLAN:
     'ROS:',
     'Examination:',
     'Procedures:',
+    'Assessment:',
+    'Next Appointment:'
+  ];
+
+  const sectionsWithAdditionalIcon = [
+    'Examination:',
+    'Assessment:',
+    'Treatment:',
     'Next Appointment:'
   ];
 
   const shouldShowGem = (text: string) => {
     return sectionsWithGems.includes(text.trim());
+  };
+
+  const shouldShowAdditionalIcon = (text: string) => {
+    return sectionsWithAdditionalIcon.includes(text.trim());
   };
 
   const renderFormattedContent = () => {
@@ -153,6 +166,14 @@ ASSESSMENT AND PLAN:
                     src={gemIcon} 
                     alt="gem" 
                     className="ml-2"
+                    style={{ width: '15px', height: '15px' }}
+                  />
+                )}
+                {!isParentSection && shouldShowAdditionalIcon(line.trim()) && (
+                  <img 
+                    src={additionalIcon} 
+                    alt="additional" 
+                    className="ml-1"
                     style={{ width: '15px', height: '15px' }}
                   />
                 )}
@@ -209,6 +230,14 @@ ASSESSMENT AND PLAN:
                     src={gemIcon} 
                     alt="gem" 
                     className="ml-2"
+                    style={{ width: '15px', height: '15px' }}
+                  />
+                )}
+                {shouldShowAdditionalIcon(line.trim()) && (
+                  <img 
+                    src={additionalIcon} 
+                    alt="additional" 
+                    className="ml-1"
                     style={{ width: '15px', height: '15px' }}
                   />
                 )}
