@@ -28,7 +28,7 @@ export default function OrdersPage() {
   ];
 
   return (
-    <div className="flex-1 p-4">
+    <div className="flex-1 p-0">
       <div className="bg-white rounded border border-gray-200">
         {/* Header */}
         <div className="flex items-center justify-between p-3 border-b border-gray-200">

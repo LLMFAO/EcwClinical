@@ -377,7 +377,7 @@ PLAN
       />
       
       {/* Main Content Area - Render different pages based on active tab */}
-      <div className="flex flex-1">
+      <div className="flex flex-1" style={{ marginTop: '0px' }}>
         {activeTab === 'progress_note' && (
           <ProgressNotePage
             content={content}

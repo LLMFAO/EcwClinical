@@ -1,6 +1,6 @@
 export default function ScribePage() {
   return (
-    <div className="flex-1 p-4">
+    <div className="flex-1 p-0">
       <div className="bg-white rounded border border-gray-200 h-full">
         <iframe
           src="https://scribe.athelas.com"

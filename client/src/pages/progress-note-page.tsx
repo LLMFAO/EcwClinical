@@ -215,7 +215,7 @@ ASSESSMENT AND PLAN:
   };
 
   return (
-    <div className="flex-1 p-4">
+    <div className="flex-1 p-0">
       <div className="bg-white rounded border border-gray-200">
 
 
