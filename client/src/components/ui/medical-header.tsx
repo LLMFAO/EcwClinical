@@ -37,7 +37,7 @@ export function MedicalHeader() {
           />
         </div>
         <div 
-          className="flex items-center justify-center w-4 h-8 cursor-pointer"
+          className="flex items-center justify-center w-4 h-8 cursor-pointer text-[#212735]"
           style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))', borderLeft: '1px solid rgba(255,255,255,0.2)' }}
         >
           <ChevronDown className="w-3 h-3 text-white" />
