@@ -444,7 +444,7 @@ PLAN
           
           {/* Patient Info Banner */}
           <div className="bg-orange-100 border-l-4 border-orange-500 p-2 text-xs">
-            <div className="font-bold text-orange-800">ATHELAS, </div>
+            <div className="font-bold text-orange-800">ATHELAS,  Abraham</div>
             <div className="text-orange-700">Oct 26, 1990 (33 yo M) | Acc No. 5022153</div>
           </div>
           
