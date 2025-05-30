@@ -128,7 +128,7 @@ export function MedicalContent({ content, onContentChange, patientInfo, activeTa
       {/* Content Area */}
       <div className="bg-white rounded border border-gray-200">
         {/* Tabs inside the content area */}
-        <div className="border-b border-gray-200 px-4 py-0 flex items-start justify-between">
+        <div className="px-0 py-0 flex items-start justify-between">
           {/* Tab Navigation */}
           <div className="flex items-start">
             {tabs.map((tab, index) => {
@@ -160,7 +160,7 @@ export function MedicalContent({ content, onContentChange, patientInfo, activeTa
           </div>
           
           {/* Quick Order Search */}
-          <div className="flex items-start">
+          <div className="flex items-start pr-4">
             <input
               type="text"
               placeholder="Quick Order Search"
