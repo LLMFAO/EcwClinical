@@ -24,7 +24,7 @@ export function MedicalHeader() {
       {/* eClinicalWorks Logo */}
       <div className="text-white font-light text-2xl ml-3 italic">cClinicalWorks</div>
       {/* Patient Lookup */}
-      <div className="flex items-center ml-4 rounded-sm overflow-hidden" style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}>
+      <div className="flex items-center ml-4 rounded-sm overflow-hidden scale-[0.8]" style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}>
         <div 
           className="flex items-center justify-center px-3 py-1 cursor-pointer"
         >
