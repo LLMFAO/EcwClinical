@@ -9,7 +9,8 @@ import {
   PenTool, 
   Paperclip,
   Shield,
-  Bell
+  Bell,
+  ChevronUp
 } from "lucide-react";
 
 interface MedicalBottomMenuProps {
@@ -18,17 +19,17 @@ interface MedicalBottomMenuProps {
 
 export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
   const menuItems = [
-    { id: 'send', label: 'Send', icon: Send },
-    { id: 'print', label: 'Print', icon: Printer },
-    { id: 'fax', label: 'ReceiptText', icon: ReceiptText },
-    { id: 'record', label: 'Record', icon: Circle },
-    { id: 'lock', label: 'Lock', icon: Lock },
+    { id: 'send', label: 'Send' },
+    { id: 'print', label: 'Print' },
+    { id: 'fax', label: 'Fax' },
+    { id: 'record', label: 'Record' },
+    { id: 'lock', label: 'Lock' },
     { id: 'details', label: 'Details' },
     { id: 'templates', label: 'Templates' },
     { id: 'claim', label: 'Claim' },
-    { id: 'letters', label: 'Letters', icon: Mail },
-    { id: 'ink', label: 'Ink', icon: PenTool },
-    { id: 'attachments', label: 'Attachments', icon: Paperclip },
+    { id: 'letters', label: 'Letters' },
+    { id: 'ink', label: 'Ink' },
+    { id: 'attachments', label: 'Attachments' },
   ];
 
   const currentTime = new Date().toLocaleTimeString('en-US', {
@@ -39,29 +40,30 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
   });
 
   return (
-    <div className="bg-gray-100 border-t border-gray-300 px-4 py-2 flex items-center justify-between text-xs">
-      <div className="flex items-center space-x-4">
-        {menuItems.map((item, index) => {
-          const Icon = item.icon;
-          
-          return (
-            <div key={item.id} className="flex items-center">
-              {index > 0 && <span className="text-gray-400 mr-4">|</span>}
-              <button
-                className="text-blue-600 hover:underline flex items-center"
-                onClick={() => onMenuAction(item.id)}
-              >
-                {Icon && <Icon className="w-3 h-3 mr-1" />}
-                {item.label}
-              </button>
-            </div>
-          );
-        })}
+    <div className="bg-gray-100 border-t border-gray-300 px-2 py-1 flex items-center justify-between text-xs">
+      <div className="flex items-center">
+        {menuItems.map((item, index) => (
+          <div key={item.id} className="flex items-center">
+            {index > 0 && <span className="text-gray-400 mx-1">|</span>}
+            <button
+              className="text-black hover:bg-gray-200 px-1 py-0 text-xs border-0 bg-transparent"
+              onClick={() => onMenuAction(item.id)}
+              style={{ 
+                border: 'none',
+                background: 'none',
+                padding: '1px 4px',
+                margin: '0'
+              }}
+            >
+              {item.label}
+            </button>
+          </div>
+        ))}
       </div>
       
       <div className="flex items-center space-x-2 text-gray-600">
         <span>PN last refreshed: {currentTime} PDT</span>
-        <Shield className="w-4 h-4 text-blue-600" />
+        <ChevronUp className="w-4 h-4 text-black fill-current" style={{ color: 'black' }} />
         <Bell className="w-4 h-4 text-orange-400" />
       </div>
     </div>
