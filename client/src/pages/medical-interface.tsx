@@ -290,6 +290,14 @@ ASSESSMENT AND PLAN:
         ))}
       </div>
       
+      {/* Tabs */}
+      <MedicalTabs
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+      />
+      
       {/* Main Content Area - Render different pages based on active tab */}
       <div className="flex flex-1">
         {activeTab === 'progress_note' && (
