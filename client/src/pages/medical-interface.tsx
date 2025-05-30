@@ -188,7 +188,6 @@ PLAN:
               <span className="text-gray-600">33 yo</span>
               <span className="text-gray-600">M</span>
               <span className="bg-red-500 text-white px-2 py-0.5 text-xs rounded">INFO</span>
-              <span className="bg-red-600 text-white px-2 py-0.5 text-xs rounded">ALLERGY</span>
             </div>
             <div className="text-gray-600 mb-1 flex items-center">
               <Calendar size={12} className="mr-1" />
