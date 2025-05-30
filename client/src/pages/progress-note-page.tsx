@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Search } from 'lucide-react';
 
 interface ProgressNotePageProps {
   content: string;
@@ -21,39 +22,174 @@ export default function ProgressNotePage({
 }: ProgressNotePageProps) {
   const [isDragging, setIsDragging] = useState(false);
 
-  const handlePaste = async (e: ClipboardEvent) => {
-    const text = e.clipboardData?.getData('text') || '';
-    if (text) {
-      onContentChange(content + text);
-    }
+  const templateStructure = `SUBJECTIVE
+ Chief Complaint
+ HPI
+ Current Medication
+ Medical History
+ Allergies / Intolerance
+ Gyn History
+ OB History
+ Surgical History
+ Hospitalization
+ Family History
+ Social History
+ ROS
+
+OBJECTIVE
+ Vitals
+ Past Results
+ Examination
+
+ASSESSMENT
+ Physical Therapy Assessment
+ Assessment
+
+PLAN
+ Treatment
+ Procedures
+ Diagnostic Imaging
+ Lab Reports
+ Procedure Orders
+ Preventative Medicine
+ Next Appointment`;
+
+  const currentData = `CHIEF COMPLAINT: Diarrhea and vomiting
+
+HISTORY OF PRESENT ILLNESS:
+The patient is a 33-year-old male who presents with a 3-day history of watery diarrhea and vomiting. The diarrhea started 3 days ago and has been occurring 6-8 times per day. The stools are watery, non-bloody, and large volume. He also reports nausea and vomiting that started 2 days ago, occurring 3-4 times per day. He denies fever, chills, abdominal pain, or recent travel. He has not taken any medications for his symptoms.
+
+REVIEW OF SYSTEMS:
+Constitutional: Denies fever, chills, or weight loss
+GI: As per HPI. Denies abdominal pain, blood in stool, or melena
+GU: Denies dysuria or hematuria
+
+PAST MEDICAL HISTORY: 
+Hypertension, diagnosed 2019
+Type 2 diabetes mellitus, diagnosed 2020
+
+MEDICATIONS:
+1. Lisinopril 10mg daily
+2. Metformin 1000mg twice daily
+
+ALLERGIES: NKDA
+
+SOCIAL HISTORY:
+Tobacco: Never smoker
+Alcohol: Social drinker, 2-3 drinks per week
+Illicit drugs: Denies
+
+FAMILY HISTORY:
+Father: Type 2 diabetes, hypertension
+Mother: Breast cancer (age 45)
+
+PHYSICAL EXAMINATION:
+Vital Signs: T 98.6°F, BP 142/88, HR 95, RR 18, SpO2 98% RA
+General: Alert, oriented, appears mildly dehydrated
+HEENT: Mucous membranes slightly dry, no scleral icterus
+Neck: No lymphadenopathy, no thyromegaly
+Cardiovascular: Regular rate and rhythm, no murmurs
+Pulmonary: Clear to auscultation bilaterally
+Abdomen: Soft, non-tender, non-distended, normal bowel sounds
+Extremities: No edema, good capillary refill
+Neurological: Alert and oriented x3, grossly normal
+
+ASSESSMENT AND PLAN:
+1. Acute gastroenteritis - likely viral
+   - Symptomatic treatment with oral rehydration
+   - BRAT diet when tolerated
+   - Return if symptoms worsen
+
+2. Hypertension - stable
+   - Continue current medications
+   - Monitor BP
+
+3. Type 2 diabetes mellitus - stable
+   - Continue metformin
+   - Monitor blood glucose during illness`;
+
+  const populateWithCurrentData = () => {
+    onContentChange(currentData);
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.ctrlKey && e.key === 'v') {
-      // Paste will be handled by the paste event
-      return;
+  const renderFormattedContent = () => {
+    if (!content || content === templateStructure) {
+      // Show template with proper formatting
+      const lines = templateStructure.split('\n');
+      return (
+        <div className="p-4 min-h-[600px]">
+          {lines.map((line, index) => {
+            if (line.trim() === '') {
+              return <div key={index} className="h-4"></div>;
+            }
+            
+            const isParentSection = !line.startsWith(' ') && line.trim() !== '';
+            
+            return (
+              <div 
+                key={index} 
+                className={`${isParentSection ? 'text-black font-black' : 'text-[#d46c23] font-black ml-4'}`}
+                style={{
+                  fontFamily: 'Arial Black, Arial, sans-serif',
+                  fontWeight: 900,
+                  WebkitFontSmoothing: 'none',
+                  MozOsxFontSmoothing: 'unset'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          })}
+        </div>
+      );
     }
+
+    // Show editable content
+    return (
+      <textarea
+        value={content}
+        onChange={(e) => onContentChange(e.target.value)}
+        className="w-full h-full min-h-[600px] border-none outline-none resize-none font-mono text-sm leading-relaxed p-4 bg-white"
+        placeholder="Enter your medical notes here..."
+        style={{
+          fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+          lineHeight: '1.6',
+          border: 'none',
+          outline: 'none',
+          background: 'transparent'
+        }}
+      />
+    );
   };
 
   return (
     <div className="flex-1 p-4">
       <div className="bg-white rounded border border-gray-200">
+        {/* Header with Quick Order Search */}
+        <div className="px-4 py-2 border-b border-gray-200 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-sm text-gray-600">Quick Order Search</span>
+            <div className="relative">
+              <Search size={16} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="pl-8 pr-3 py-1 border border-gray-300 rounded text-sm w-64"
+              />
+            </div>
+          </div>
+          <button
+            onClick={populateWithCurrentData}
+            className="bg-blue-600 text-white px-4 py-1 rounded text-sm hover:bg-blue-700"
+          >
+            Populate with Current Data
+          </button>
+        </div>
+
         {/* Content Editor */}
-        <div className="p-4 relative">
+        <div className="relative">
           <div className="min-h-[600px] relative">
-            <textarea
-              value={content}
-              onChange={(e) => onContentChange(e.target.value)}
-              className="w-full h-full min-h-[600px] border-none outline-none resize-none font-mono text-sm leading-relaxed p-4 bg-white"
-              placeholder="Enter your medical notes here..."
-              style={{
-                fontFamily: 'Consolas, Monaco, "Courier New", monospace',
-                lineHeight: '1.6',
-                border: 'none',
-                outline: 'none',
-                background: 'transparent'
-              }}
-            />
+            {renderFormattedContent()}
             
             {/* Drag and drop overlay */}
             {isDragging && (
