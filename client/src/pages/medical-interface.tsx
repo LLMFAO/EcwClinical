@@ -8,6 +8,7 @@ import { apiRequest } from "@/lib/queryClient";
 import type { MedicalDocument, ClipboardSync } from "@shared/schema";
 import documentsIcon from "@assets/documents.png";
 import dollarIcon from "@assets/dollar-symbol.png";
+import penIcon from "@assets/pen.png";
 
 export default function MedicalInterface() {
   const [activeTab, setActiveTab] = useState('progress_note');
@@ -184,7 +185,13 @@ export default function MedicalInterface() {
               className="absolute bottom-1 right-1 w-10 h-10 object-contain opacity-10"
             />
           </div>
-          <div className="w-28 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000]"></div>
+          <div className="w-28 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000] relative">
+            <img 
+              src={penIcon}
+              alt=""
+              className="absolute bottom-1 right-1 w-10 h-10 object-contain opacity-10"
+            />
+          </div>
           <div className="w-28 h-24 border border-pink-300 rounded shadow-sm p-1 bg-[#fbcdcf]"></div>
         </div>
       </div>
