@@ -180,6 +180,11 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-32 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1 relative">
+            <div className="text-xs text-black">
+              <div>Ins: BCBS</div>
+              <div>Acct Bal: $22.17</div>
+              <div>Gr Bal: $0.00</div>
+            </div>
             <img 
               src={dollarIcon}
               alt=""
