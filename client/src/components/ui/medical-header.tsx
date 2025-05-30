@@ -26,7 +26,7 @@ export function MedicalHeader() {
       {/* Patient Lookup */}
       <div className="flex items-center ml-4">
         <div 
-          className="flex items-center justify-center px-3 py-1 cursor-pointer text-[#000]"
+          className="flex items-center justify-center px-3 py-1 cursor-pointer"
           style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
         >
           <img 
@@ -37,7 +37,7 @@ export function MedicalHeader() {
           />
         </div>
         <div 
-          className="flex items-center justify-center w-4 h-8 cursor-pointer text-[#212735]"
+          className="flex items-center justify-center w-4 h-8 cursor-pointer"
           style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))', borderLeft: '1px solid rgba(255,255,255,0.2)' }}
         >
           <ChevronDown className="w-3 h-3 text-white" />
