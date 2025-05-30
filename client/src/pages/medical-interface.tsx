@@ -187,6 +187,7 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-28 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000] relative">
+            <div className="text-xs font-bold text-center">NOTES</div>
             <img 
               src={penIcon}
               alt=""
@@ -194,6 +195,7 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-28 h-24 border border-pink-300 rounded shadow-sm p-1 bg-[#fbcdcf] relative">
+            <div className="text-xs font-bold text-center">SECURE NOTES</div>
             <img 
               src={lockIcon}
               alt=""
