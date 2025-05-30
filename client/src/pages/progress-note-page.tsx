@@ -165,26 +165,7 @@ ASSESSMENT AND PLAN:
   return (
     <div className="flex-1 p-4">
       <div className="bg-white rounded border border-gray-200">
-        {/* Header with Quick Order Search */}
-        <div className="px-4 py-2 border-b border-gray-200 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-600">Quick Order Search</span>
-            <div className="relative">
-              <Search size={16} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search..."
-                className="pl-8 pr-3 py-1 border border-gray-300 rounded text-sm w-64"
-              />
-            </div>
-          </div>
-          <button
-            onClick={populateWithCurrentData}
-            className="bg-blue-600 text-white px-4 py-1 rounded text-sm hover:bg-blue-700"
-          >
-            Populate with Current Data
-          </button>
-        </div>
+
 
         {/* Content Editor */}
         <div className="relative">
