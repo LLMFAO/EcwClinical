@@ -173,6 +173,10 @@ export default function MedicalInterface() {
         {/* Sticky Notes */}
         <div className="flex space-x-1 mr-12">
           <div className="w-32 h-24 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1 relative">
+            <div className="text-xs text-black">
+              <div>Appt(L): 01/29/25</div>
+              <div>Appt(N): 06/29/25</div>
+            </div>
             <img 
               src={documentsIcon}
               alt=""
@@ -192,7 +196,8 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-32 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000] relative">
-            <div className="text-xs font-bold text-center">NOTES</div>
+            <div className="text-xs font-bold text-left">NOTES</div>
+            <div className="border-t border-gray-400 mt-1 mb-1"></div>
             <img 
               src={penIcon}
               alt=""
@@ -200,7 +205,8 @@ export default function MedicalInterface() {
             />
           </div>
           <div className="w-32 h-24 border border-pink-300 rounded shadow-sm p-1 bg-[#fbcdcf] relative">
-            <div className="text-xs font-bold text-center">SECURE NOTES</div>
+            <div className="text-xs font-bold text-left">SECURE NOTES</div>
+            <div className="border-t border-gray-400 mt-1 mb-1"></div>
             <img 
               src={lockIcon}
               alt=""
