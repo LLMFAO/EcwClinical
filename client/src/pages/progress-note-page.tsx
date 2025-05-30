@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search } from 'lucide-react';
+import gemIcon from "@assets/gem.png";
 
 interface ProgressNotePageProps {
   content: string;
@@ -22,37 +23,37 @@ export default function ProgressNotePage({
 }: ProgressNotePageProps) {
   const [isDragging, setIsDragging] = useState(false);
 
-  const templateStructure = `SUBJECTIVE
- Chief Complaint
- HPI
- Current Medication
- Medical History
- Allergies / Intolerance
- Gyn History
- OB History
- Surgical History
- Hospitalization
- Family History
- Social History
- ROS
+  const templateStructure = `SUBJECTIVE:
+ Chief Complaint:
+ HPI:
+ Current Medication:
+ Medical History:
+ Allergies / Intolerance:
+ Gyn History:
+ OB History:
+ Surgical History:
+ Hospitalization:
+ Family History:
+ Social History:
+ ROS:
 
-OBJECTIVE
- Vitals
- Past Results
- Examination
+OBJECTIVE:
+ Vitals:
+ Past Results:
+ Examination:
 
-ASSESSMENT
- Physical Therapy Assessment
- Assessment
+ASSESSMENT:
+ Physical Therapy Assessment:
+ Assessment:
 
-PLAN
- Treatment
- Procedures
- Diagnostic Imaging
- Lab Reports
- Procedure Orders
- Preventative Medicine
- Next Appointment`;
+PLAN:
+ Treatment:
+ Procedures:
+ Diagnostic Imaging:
+ Lab Reports:
+ Procedure Orders:
+ Preventative Medicine:
+ Next Appointment:`;
 
   const currentData = `CHIEF COMPLAINT: Diarrhea and vomiting
 
@@ -112,6 +113,21 @@ ASSESSMENT AND PLAN:
     onContentChange(currentData);
   };
 
+  const sectionsWithGems = [
+    'Chief Complaint:',
+    'HPI:',
+    'Current Medication:',
+    'Allergies / Intolerance:',
+    'ROS:',
+    'Examination:',
+    'Procedures:',
+    'Next Appointment:'
+  ];
+
+  const shouldShowGem = (text: string) => {
+    return sectionsWithGems.includes(text.trim());
+  };
+
   const renderFormattedContent = () => {
     if (!content || content === templateStructure) {
       // Show template with proper formatting
@@ -128,7 +144,7 @@ ASSESSMENT AND PLAN:
             return (
               <div 
                 key={index} 
-                className={`${isParentSection ? 'text-black font-black' : 'text-[#d46c23] font-black ml-4'}`}
+                className={`${isParentSection ? 'text-black font-black' : 'text-[#d46c23] font-black ml-4 flex items-center'}`}
                 style={{
                   fontFamily: 'Arial Black, Arial, sans-serif',
                   fontWeight: 900,
@@ -137,6 +153,14 @@ ASSESSMENT AND PLAN:
                 }}
               >
                 {line.trim()}
+                {!isParentSection && shouldShowGem(line.trim()) && (
+                  <img 
+                    src={gemIcon} 
+                    alt="gem" 
+                    className="ml-2"
+                    style={{ width: '20px', height: '20px' }}
+                  />
+                )}
               </div>
             );
           })}
@@ -176,7 +200,7 @@ ASSESSMENT AND PLAN:
             return (
               <div 
                 key={index} 
-                className="text-[#d46c23] font-black ml-4"
+                className="text-[#d46c23] font-black ml-4 flex items-center"
                 style={{
                   fontFamily: 'Arial Black, Arial, sans-serif',
                   fontWeight: 900,
@@ -185,6 +209,14 @@ ASSESSMENT AND PLAN:
                 }}
               >
                 {line.trim()}
+                {shouldShowGem(line.trim()) && (
+                  <img 
+                    src={gemIcon} 
+                    alt="gem" 
+                    className="ml-2"
+                    style={{ width: '20px', height: '20px' }}
+                  />
+                )}
               </div>
             );
           } else if (isDataContent) {
