@@ -55,59 +55,54 @@ PLAN:
  Preventative Medicine:
  Next Appointment:`;
 
-  const currentData = `CHIEF COMPLAINT: Diarrhea and vomiting
+  const currentData = `CHIEF COMPLAINT: Left ankle pain and swelling after fall
 
 HISTORY OF PRESENT ILLNESS:
-The patient is a 33-year-old male who presents with a 3-day history of watery diarrhea and vomiting. The diarrhea started 3 days ago and has been occurring 6-8 times per day. The stools are watery, non-bloody, and large volume. He also reports nausea and vomiting that started 2 days ago, occurring 3-4 times per day. He denies fever, chills, abdominal pain, or recent travel. He has not taken any medications for his symptoms.
+The patient is a 28-year-old female who presents with acute onset left ankle pain and swelling following a fall while jogging yesterday evening. She reports stepping into a pothole and twisting her ankle inward. She immediately felt sharp pain and was unable to bear weight. She applied ice overnight and took ibuprofen but pain persists. She is concerned the ankle may be broken and is requesting X-rays. She denies numbness, tingling, or color changes in the foot.
 
 REVIEW OF SYSTEMS:
-Constitutional: Denies fever, chills, or weight loss
-GI: As per HPI. Denies abdominal pain, blood in stool, or melena
-GU: Denies dysuria or hematuria
+Constitutional: Denies fever, chills, or systemic symptoms
+Musculoskeletal: Left ankle pain and swelling as per HPI
+Neurological: Denies numbness or tingling in foot
 
 PAST MEDICAL HISTORY: 
-Hypertension, diagnosed 2019
-Type 2 diabetes mellitus, diagnosed 2020
+None significant
 
 MEDICATIONS:
-1. Lisinopril 10mg daily
-2. Metformin 1000mg twice daily
+Ibuprofen 400mg as needed for pain (started yesterday)
 
 ALLERGIES: NKDA
 
 SOCIAL HISTORY:
 Tobacco: Never smoker
-Alcohol: Social drinker, 2-3 drinks per week
-Illicit drugs: Denies
+Alcohol: Occasional social drinking
+Exercise: Regular jogger, 3-4 times per week
 
 FAMILY HISTORY:
-Father: Type 2 diabetes, hypertension
-Mother: Breast cancer (age 45)
+Non-contributory
 
 PHYSICAL EXAMINATION:
-Vital Signs: T 98.6°F, BP 142/88, HR 95, RR 18, SpO2 98% RA
-General: Alert, oriented, appears mildly dehydrated
-HEENT: Mucous membranes slightly dry, no scleral icterus
-Neck: No lymphadenopathy, no thyromegaly
-Cardiovascular: Regular rate and rhythm, no murmurs
-Pulmonary: Clear to auscultation bilaterally
-Abdomen: Soft, non-tender, non-distended, normal bowel sounds
-Extremities: No edema, good capillary refill
-Neurological: Alert and oriented x3, grossly normal
+Vital Signs: T 98.4°F, BP 118/72, HR 82, RR 16, SpO2 99% RA
+General: Alert, oriented, appears uncomfortable but in no acute distress
+Extremities: Left ankle with moderate swelling and ecchymosis over lateral aspect
+  - Tenderness to palpation over lateral malleolus and anterior talofibular ligament
+  - Range of motion limited by pain
+  - Able to bear partial weight with assistance
+  - No deformity or crepitus
+  - Distal pulses intact, capillary refill <2 seconds
+  - Sensation intact to light touch
 
 ASSESSMENT AND PLAN:
-1. Acute gastroenteritis - likely viral
-   - Symptomatic treatment with oral rehydration
-   - BRAT diet when tolerated
-   - Return if symptoms worsen
+1. Left ankle sprain (suspected lateral ligament injury)
+   - Ottawa ankle rules do not indicate need for X-ray
+   - RICE protocol (Rest, Ice, Compression, Elevation)
+   - Elastic bandage wrap for support
+   - Weight bearing as tolerated with crutches if needed
+   - Follow up in 1 week if not improving
 
-2. Hypertension - stable
-   - Continue current medications
-   - Monitor BP
-
-3. Type 2 diabetes mellitus - stable
-   - Continue metformin
-   - Monitor blood glucose during illness`;
+2. Pain management
+   - Continue ibuprofen 400mg every 6 hours with food
+   - May use acetaminophen for breakthrough pain`;
 
   const populateWithCurrentData = () => {
     onContentChange(currentData);
