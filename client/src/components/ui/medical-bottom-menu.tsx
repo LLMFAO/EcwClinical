@@ -54,7 +54,8 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
             }}
           >
             {item.label}
-            <Triangle className="w-2 h-2 text-black ml-1 fill-current" style={{ transform: 'rotate(0deg)' }} />
+            <span className="mx-1 text-gray-300">|</span>
+            <Triangle className="w-2 h-2 text-black fill-current" style={{ transform: 'rotate(0deg)' }} />
           </button>
         ))}
       </div>
