@@ -383,7 +383,7 @@ PLAN
         {/* Right UpToDate Header - 1/4 width */}
         <div className="w-1/4">
           <div className="text-white p-2 flex items-center justify-between border-b border-gray-200 bg-[#1c7fa5]">
-            <h2 className="text-lg font-semibold italic">UpToDate</h2>
+            <h2 className="text-lg font-semibold italic">UpdateData</h2>
             <div className="flex space-x-1">
               <button className="p-1 hover:bg-teal-700 rounded">
                 <ChevronLeft size={16} />
