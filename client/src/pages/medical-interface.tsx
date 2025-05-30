@@ -421,7 +421,7 @@ PLAN
             <div className="relative">
               <input
                 type="text"
-                placeholder="aspirin"
+                placeholder=""
                 className="w-full pl-3 pr-8 py-2 border border-gray-300 rounded text-sm"
                 defaultValue=""
               />
