@@ -55,7 +55,7 @@ PLAN
 
   // Patient info (would normally come from props or context)
   const patientInfo = {
-    name: "TEST, Aayansh",
+    name: "ATHELAS, Abraham",
     dob: "Oct 26, 1990 (33 yo M)",
     gender: "M",
     accNo: "14044"
