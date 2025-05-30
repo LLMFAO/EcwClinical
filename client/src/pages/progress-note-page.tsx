@@ -158,7 +158,7 @@ ASSESSMENT AND PLAN:
                     src={gemIcon} 
                     alt="gem" 
                     className="ml-2"
-                    style={{ width: '20px', height: '20px' }}
+                    style={{ width: '15px', height: '15px' }}
                   />
                 )}
               </div>
@@ -214,7 +214,7 @@ ASSESSMENT AND PLAN:
                     src={gemIcon} 
                     alt="gem" 
                     className="ml-2"
-                    style={{ width: '20px', height: '20px' }}
+                    style={{ width: '15px', height: '15px' }}
                   />
                 )}
               </div>
