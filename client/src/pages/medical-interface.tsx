@@ -219,16 +219,14 @@ export default function MedicalInterface() {
           </div>
         </div>
       </div>
-      <MedicalTabs
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-      />
       <MedicalContent
         content={content}
         onContentChange={handleContentChange}
         patientInfo={patientInfo}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
       />
       <MedicalBottomMenu onMenuAction={handleMenuAction} />
     </div>
