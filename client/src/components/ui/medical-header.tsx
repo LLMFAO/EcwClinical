@@ -24,11 +24,11 @@ export function MedicalHeader() {
       {/* eClinicalWorks Logo */}
       <div className="text-white font-light text-2xl ml-3 italic">cClinicalWorks</div>
       {/* Patient Lookup */}
-      <div className="flex items-center ml-4">
-        <div 
-          className="flex items-center justify-center px-3 py-1 rounded-l-sm cursor-pointer"
-          style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
-        >
+      <div 
+        className="flex items-center justify-center rounded-sm ml-4 cursor-pointer relative"
+        style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
+      >
+        <div className="flex items-center px-3 py-1">
           <img 
             src={searchUserIcon}
             alt="Patient Search"
@@ -36,11 +36,8 @@ export function MedicalHeader() {
             style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(1076%) hue-rotate(183deg) brightness(95%) contrast(96%)' }}
           />
         </div>
-        <div 
-          className="flex items-center justify-center px-2 py-1 rounded-r-sm cursor-pointer border-l border-gray-500"
-          style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
-        >
-          <ChevronDown className="w-3 h-3" style={{ color: 'hsl(var(--header-text))' }} />
+        <div className="absolute top-0 right-0 bg-white rounded-sm">
+          <ChevronDown className="w-2 h-2 text-gray-600" />
         </div>
       </div>
       {/* Status Circles */}
