@@ -15,7 +15,7 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
   ];
 
   return (
-    <div className="bg-white border-b border-gray-200 px-4 py-2 flex items-start justify-between">
+    <div className="bg-white border-b border-gray-200 px-4 py-0 flex items-start justify-between">
       {/* Tab Navigation */}
       <div className="flex items-start">
         {tabs.map((tab, index) => {
