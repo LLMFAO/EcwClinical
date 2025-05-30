@@ -171,7 +171,7 @@ PLAN:
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 pb-8">
       <MedicalHeader />
       {/* Patient Info Header */}
       <div className="px-1 py-2 border-b border-gray-200 flex items-center justify-between bg-[#fff]">
