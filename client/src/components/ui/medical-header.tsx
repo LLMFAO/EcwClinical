@@ -26,7 +26,7 @@ export function MedicalHeader() {
       {/* Patient Lookup */}
       <div className="flex items-center ml-4">
         <div 
-          className="flex items-center justify-center px-3 py-1 cursor-pointer"
+          className="flex items-center justify-center px-3 py-1 cursor-pointer text-[#000]"
           style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
         >
           <img 
