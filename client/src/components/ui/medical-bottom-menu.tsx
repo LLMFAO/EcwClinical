@@ -10,7 +10,8 @@ import {
   Paperclip,
   Shield,
   Bell,
-  ChevronUp
+  ChevronUp,
+  Triangle
 } from "lucide-react";
 
 interface MedicalBottomMenuProps {
@@ -56,7 +57,7 @@ export function MedicalBottomMenu({ onMenuAction }: MedicalBottomMenuProps) {
               }}
             >
               {item.label}
-              <ChevronUp className="w-3 h-3 text-black ml-1" />
+              <Triangle className="w-3 h-3 text-black ml-1 fill-current" style={{ transform: 'rotate(0deg)' }} />
             </button>
           </div>
         ))}
