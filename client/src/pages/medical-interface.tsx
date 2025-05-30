@@ -278,71 +278,66 @@ PLAN:
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             onPopulateData={() => {
-              setContent(`SUBJECTIVE
- Chief Complaint
-  Diarrhea and vomiting
- HPI
-  The patient is a 33-year-old male who presents with a 3-day history of watery diarrhea and vomiting. The diarrhea started 3 days ago and has been occurring 6-8 times per day. The stools are watery, non-bloody, and large volume. He also reports nausea and vomiting that started 2 days ago, occurring 3-4 times per day. He denies fever, chills, abdominal pain, or recent travel. He has not taken any medications for his symptoms.
- Current Medication
-  1. Lisinopril 10mg daily
-  2. Metformin 1000mg twice daily
- Medical History
-  Hypertension, diagnosed 2019
-  Type 2 diabetes mellitus, diagnosed 2020
- Allergies / Intolerance
+              setContent(`SUBJECTIVE:
+ Chief Complaint:
+  Left ankle pain and swelling after fall
+ HPI:
+  The patient is a 33-year-old male who presents with acute onset left ankle pain and swelling following a fall while jogging yesterday evening. He reports stepping into a pothole and twisting his ankle inward. He immediately felt sharp pain and was unable to bear weight. He applied ice overnight and took ibuprofen but pain persists. He is concerned the ankle may be broken and is requesting X-rays. He denies numbness, tingling, or color changes in the foot.
+ Current Medication:
+  Ibuprofen 400mg as needed for pain (started yesterday)
+ Medical History:
+  None significant
+ Allergies / Intolerance:
   NKDA
- Gyn History
- OB History
- Surgical History
- Hospitalization
- Family History
-  Father: Type 2 diabetes, hypertension
-  Mother: Breast cancer (age 45)
- Social History
+ Gyn History:
+ OB History:
+ Surgical History:
+ Hospitalization:
+ Family History:
+  Non-contributory
+ Social History:
   Tobacco: Never smoker
-  Alcohol: Social drinker, 2-3 drinks per week
-  Illicit drugs: Denies
- ROS
-  Constitutional: Denies fever, chills, or weight loss
-  GI: As per HPI. Denies abdominal pain, blood in stool, or melena
-  GU: Denies dysuria or hematuria
+  Alcohol: Occasional social drinking
+  Exercise: Regular jogger, 3-4 times per week
+ ROS:
+  Constitutional: Denies fever, chills, or systemic symptoms
+  Musculoskeletal: Left ankle pain and swelling as per HPI
+  Neurological: Denies numbness or tingling in foot
 
-OBJECTIVE
- Vitals
-  T 98.6°F, BP 142/88, HR 95, RR 18, SpO2 98% RA
- Past Results
- Examination
-  General: Alert, oriented, appears mildly dehydrated
-  HEENT: Mucous membranes slightly dry, no scleral icterus
-  Neck: No lymphadenopathy, no thyromegaly
-  Cardiovascular: Regular rate and rhythm, no murmurs
-  Pulmonary: Clear to auscultation bilaterally
-  Abdomen: Soft, non-tender, non-distended, normal bowel sounds
-  Extremities: No edema, good capillary refill
-  Neurological: Alert and oriented x3, grossly normal
+OBJECTIVE:
+ Vitals:
+  T 98.4°F, BP 118/72, HR 82, RR 16, SpO2 99% RA
+ Past Results:
+ Examination:
+  General: Alert, oriented, appears uncomfortable but in no acute distress
+  Extremities: Left ankle with moderate swelling and ecchymosis over lateral aspect
+    - Tenderness to palpation over lateral malleolus and anterior talofibular ligament
+    - Range of motion limited by pain
+    - Able to bear partial weight with assistance
+    - No deformity or crepitus
+    - Distal pulses intact, capillary refill <2 seconds
+    - Sensation intact to light touch
 
-ASSESSMENT
- Physical Therapy Assessment
- Assessment
-  1. Acute gastroenteritis - likely viral
-  2. Hypertension - stable
-  3. Type 2 diabetes mellitus - stable
+ASSESSMENT:
+ Physical Therapy Assessment:
+ Assessment:
+  1. Left ankle sprain (suspected lateral ligament injury)
 
-PLAN
- Treatment
-  - Symptomatic treatment with oral rehydration
-  - BRAT diet when tolerated
-  - Return if symptoms worsen
-  - Continue current medications
-  - Monitor BP
-  - Continue metformin
-  - Monitor blood glucose during illness
- Procedures
- Diagnostic Imaging
- Lab Reports
- Procedure Orders
- Preventative Medicine
- Next Appointment`);
+PLAN:
+ Treatment:
+  - Ottawa ankle rules do not indicate need for X-ray
+  - RICE protocol (Rest, Ice, Compression, Elevation)
+  - Elastic bandage wrap for support
+  - Weight bearing as tolerated with crutches if needed
+  - Follow up in 1 week if not improving
+  - Continue ibuprofen 400mg every 6 hours with food
+  - May use acetaminophen for breakthrough pain
+ Procedures:
+ Diagnostic Imaging:
+ Lab Reports:
+ Procedure Orders:
+ Preventative Medicine:
+ Next Appointment:`);
             }}
             onResetData={() => {
               setContent(`SUBJECTIVE:
