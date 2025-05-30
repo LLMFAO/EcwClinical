@@ -10,6 +10,7 @@ import documentsIcon from "@assets/documents.png";
 import dollarIcon from "@assets/dollar-symbol.png";
 import penIcon from "@assets/pen.png";
 import lockIcon from "@assets/lock.png";
+import { Calendar, Phone, Mail } from "lucide-react";
 
 export default function MedicalInterface() {
   const [activeTab, setActiveTab] = useState('progress_note');
@@ -156,12 +157,15 @@ export default function MedicalInterface() {
               <span className="bg-red-500 text-white px-2 py-0.5 text-xs rounded">INFO</span>
               <span className="bg-red-600 text-white px-2 py-0.5 text-xs rounded">ALLERGY</span>
             </div>
-            <div className="text-gray-600 mb-1">
+            <div className="text-gray-600 mb-1 flex items-center">
+              <Calendar size={12} className="mr-1" />
               <span>{patientInfo.dob}</span>
               <span className="mx-2">|</span>
+              <Phone size={12} className="mr-1" />
               <span>(123) 456-7890</span>
             </div>
-            <div className="text-gray-600 mb-1">
+            <div className="text-gray-600 mb-1 flex items-center">
+              <Mail size={12} className="mr-1" />
               <span>test@email.com</span>
             </div>
             <div className="text-gray-700">
