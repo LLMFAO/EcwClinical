@@ -423,7 +423,7 @@ PLAN
                 type="text"
                 placeholder="aspirin"
                 className="w-full pl-3 pr-8 py-2 border border-gray-300 rounded text-sm"
-                defaultValue="aspirin"
+                defaultValue=""
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2">
                 <Search size={16} className="text-gray-400" />
