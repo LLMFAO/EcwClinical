@@ -1,4 +1,4 @@
-import { Menu, User, RotateCcw, Search } from "lucide-react";
+import { Menu, User, RotateCcw, Search, ChevronDown } from "lucide-react";
 import searchUserIcon from "@assets/search-user.png";
 
 export function MedicalHeader() {
@@ -11,7 +11,6 @@ export function MedicalHeader() {
       >
         <Menu className="w-4 h-4 text-white" />
       </div>
-      
       {/* User Circle */}
       <div 
         className="w-8 h-8 rounded-full flex items-center justify-center ml-3 text-xs font-bold"
@@ -22,31 +21,33 @@ export function MedicalHeader() {
       >
         DS
       </div>
-      
       {/* eClinicalWorks Logo */}
-      <div className="text-white font-light text-2xl ml-3 italic">
-        eClinicalWorks
-      </div>
-      
+      <div className="text-white font-light text-2xl ml-3 italic">cClinicalWorks</div>
       {/* Patient Lookup */}
-      <div 
-        className="flex items-center justify-center px-3 py-1 rounded-sm ml-4 cursor-pointer"
-        style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
-      >
-        <img 
-          src={searchUserIcon}
-          alt="Patient Search"
-          className="w-6 h-6 filter brightness-0"
-          style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(1076%) hue-rotate(183deg) brightness(95%) contrast(96%)' }}
-        />
+      <div className="flex items-center ml-4">
+        <div 
+          className="flex items-center justify-center px-3 py-1 rounded-l-sm cursor-pointer"
+          style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
+        >
+          <img 
+            src={searchUserIcon}
+            alt="Patient Search"
+            className="w-6 h-6 filter brightness-0"
+            style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(1076%) hue-rotate(183deg) brightness(95%) contrast(96%)' }}
+          />
+        </div>
+        <div 
+          className="flex items-center justify-center px-2 py-1 rounded-r-sm cursor-pointer border-l border-gray-500"
+          style={{ backgroundColor: 'hsl(var(--patient-lookup-bg))' }}
+        >
+          <ChevronDown className="w-3 h-3" style={{ color: 'hsl(var(--header-text))' }} />
+        </div>
       </div>
-      
       {/* Status Circles */}
       <div className="flex items-center space-x-2 ml-4">
         <div className="status-circle"></div>
         <div className="status-circle"></div>
       </div>
-      
       {/* Right Aligned Controls */}
       <div className="ml-auto flex items-center space-x-2">
         <button className="jelly-button">

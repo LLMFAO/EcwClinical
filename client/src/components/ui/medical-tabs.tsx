@@ -53,12 +53,8 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
           placeholder="Quick Order Search"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="border border-gray-300 px-3 py-1 text-sm rounded-l w-48 focus:outline-none focus:border-blue-400"
+          className="border border-gray-300 px-3 py-1 text-sm rounded w-48 focus:outline-none focus:border-blue-400"
         />
-        <button className="bg-gray-100 border border-l-0 border-gray-300 px-2 py-1 rounded-r hover:bg-gray-200 flex items-center">
-          <Users size={16} className="text-gray-600" />
-          <ChevronDown size={12} className="ml-1 text-gray-600" />
-        </button>
       </div>
     </div>
   );
