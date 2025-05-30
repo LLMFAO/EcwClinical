@@ -219,9 +219,8 @@ export default function MedicalInterface() {
           </div>
         </div>
       </div>
-      
       {/* Medical Links Row */}
-      <div className="px-4 py-2 flex items-center space-x-6" style={{ backgroundColor: '#1b9ec8', marginBottom: '10px' }}>
+      <div className="px-4 py-2 flex items-center space-x-6 font-bold" style={{ backgroundColor: '#1b9ec8', marginBottom: '10px' }}>
         {['Medical Summary', 'CDSS', 'Labs', 'DI', 'Procedures', 'Growth Chart', 'Imm', 'T.Inj', 'Encounters', 'Patient Docs', 'Flowsheets', 'Notes'].map((link, index) => (
           <a
             key={index}
