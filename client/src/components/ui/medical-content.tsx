@@ -127,22 +127,8 @@ export function MedicalContent({ content, onContentChange, patientInfo, activeTa
     <div className="flex-1 p-4">
       {/* Content Area */}
       <div className="bg-white rounded border border-gray-200">
-        {/* Medical Links Row */}
-        <div className="px-4 py-2 flex items-center space-x-6" style={{ backgroundColor: '#1b9ec8' }}>
-          {['Medical Summary', 'CDSS', 'Labs', 'DI', 'Procedures', 'Growth Chart', 'Imm', 'T.Inj', 'Encounters', 'Patient Docs', 'Flowsheets', 'Notes'].map((link, index) => (
-            <a
-              key={index}
-              href="#"
-              className="text-white text-sm hover:text-white visited:text-white no-underline"
-              style={{ color: 'white' }}
-            >
-              {link}
-            </a>
-          ))}
-        </div>
-        
         {/* Tabs inside the content area */}
-        <div className="px-0 py-0 flex items-start justify-between">
+        <div className="px-0 py-0 flex items-start justify-between" style={{ marginTop: '10px' }}>
           {/* Tab Navigation */}
           <div className="flex items-start">
             {tabs.map((tab, index) => {
