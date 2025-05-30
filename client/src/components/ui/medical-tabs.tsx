@@ -19,17 +19,6 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
     <div className="bg-white border-b border-gray-200 px-4 py-0 flex items-start justify-between">
       {/* Tab Navigation */}
       <div className="flex items-start">
-        {/* Populate Data Button */}
-        {activeTab === 'progress_note' && onPopulateData && (
-          <button
-            onClick={onPopulateData}
-            className="px-3 py-2 text-gray-600 hover:text-gray-800 border-r border-gray-300"
-            title="Populate with current data"
-          >
-            <Download className="w-4 h-4" />
-          </button>
-        )}
-        
         {tabs.map((tab, index) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
@@ -58,8 +47,19 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
         })}
       </div>
       
-      {/* Quick Order Search */}
-      <div className="flex items-start">
+      {/* Quick Order Search with Populate Button */}
+      <div className="flex items-start space-x-2">
+        {/* Populate Data Button */}
+        {activeTab === 'progress_note' && onPopulateData && (
+          <button
+            onClick={onPopulateData}
+            className="px-2 py-1 text-gray-600 hover:text-gray-800 border border-gray-300 rounded"
+            title="Populate with current data"
+          >
+            <Download className="w-4 h-4" />
+          </button>
+        )}
+        
         <input
           type="text"
           placeholder="Quick Order Search"
