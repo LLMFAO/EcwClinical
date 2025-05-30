@@ -15,9 +15,9 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
   ];
 
   return (
-    <div className="bg-white border-b border-gray-200 px-4 py-2 flex items-center justify-between">
+    <div className="bg-white border-b border-gray-200 px-4 py-2 flex items-start justify-between">
       {/* Tab Navigation */}
-      <div className="flex">
+      <div className="flex items-start">
         {tabs.map((tab, index) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
@@ -47,7 +47,7 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
       </div>
       
       {/* Quick Order Search */}
-      <div className="flex items-center">
+      <div className="flex items-start">
         <input
           type="text"
           placeholder="Quick Order Search"
