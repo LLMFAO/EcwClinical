@@ -172,21 +172,21 @@ export default function MedicalInterface() {
         
         {/* Sticky Notes */}
         <div className="flex space-x-1 mr-12">
-          <div className="w-28 h-24 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1 relative">
+          <div className="w-32 h-24 bg-yellow-200 border border-yellow-300 rounded shadow-sm p-1 relative">
             <img 
               src={documentsIcon}
               alt=""
               className="absolute bottom-1 right-1 w-10 h-10 object-contain opacity-10"
             />
           </div>
-          <div className="w-28 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1 relative">
+          <div className="w-32 h-24 bg-green-200 border border-green-300 rounded shadow-sm p-1 relative">
             <img 
               src={dollarIcon}
               alt=""
               className="absolute bottom-1 right-1 w-10 h-10 object-contain opacity-10"
             />
           </div>
-          <div className="w-28 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000] relative">
+          <div className="w-32 h-24 border border-blue-300 rounded shadow-sm p-1 bg-[#d8e5a9] text-[#000] relative">
             <div className="text-xs font-bold text-center">NOTES</div>
             <img 
               src={penIcon}
@@ -194,7 +194,7 @@ export default function MedicalInterface() {
               className="absolute bottom-1 right-1 w-10 h-10 object-contain opacity-10"
             />
           </div>
-          <div className="w-28 h-24 border border-pink-300 rounded shadow-sm p-1 bg-[#fbcdcf] relative">
+          <div className="w-32 h-24 border border-pink-300 rounded shadow-sm p-1 bg-[#fbcdcf] relative">
             <div className="text-xs font-bold text-center">SECURE NOTES</div>
             <img 
               src={lockIcon}
