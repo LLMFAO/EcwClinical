@@ -1,4 +1,4 @@
-import { ClipboardList, Mic, List, ChevronDown, Users, Download } from "lucide-react";
+import { ClipboardList, Mic, List, ChevronDown, Users, Download, RotateCcw } from "lucide-react";
 
 interface MedicalTabsProps {
   activeTab: string;
@@ -6,9 +6,10 @@ interface MedicalTabsProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   onPopulateData?: () => void;
+  onResetData?: () => void;
 }
 
-export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChange, onPopulateData }: MedicalTabsProps) {
+export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChange, onPopulateData, onResetData }: MedicalTabsProps) {
   const tabs = [
     { id: 'progress_note', label: 'Progress Note', icon: ClipboardList },
     { id: 'scribe', label: 'Scribe', icon: Mic },
@@ -57,6 +58,17 @@ export function MedicalTabs({ activeTab, onTabChange, searchQuery, onSearchChang
             title="Populate with current data"
           >
             <Download className="w-4 h-4" />
+          </button>
+        )}
+        
+        {/* Reset Data Button */}
+        {activeTab === 'progress_note' && onResetData && (
+          <button
+            onClick={onResetData}
+            className="px-2 py-1 text-gray-600 hover:text-gray-800 border border-gray-300 rounded"
+            title="Reset to template"
+          >
+            <RotateCcw className="w-4 h-4" />
           </button>
         )}
         

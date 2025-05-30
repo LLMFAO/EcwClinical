@@ -341,6 +341,39 @@ PLAN
  Preventative Medicine
  Next Appointment`);
         }}
+        onResetData={() => {
+          setContent(`SUBJECTIVE
+ Chief Complaint
+ HPI
+ Current Medication
+ Medical History
+ Allergies / Intolerance
+ Gyn History
+ OB History
+ Surgical History
+ Hospitalization
+ Family History
+ Social History
+ ROS
+
+OBJECTIVE
+ Vitals
+ Past Results
+ Examination
+
+ASSESSMENT
+ Physical Therapy Assessment
+ Assessment
+
+PLAN
+ Treatment
+ Procedures
+ Diagnostic Imaging
+ Lab Reports
+ Procedure Orders
+ Preventative Medicine
+ Next Appointment`);
+        }}
       />
       
       {/* Main Content Area - Render different pages based on active tab */}
