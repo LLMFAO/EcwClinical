@@ -174,7 +174,7 @@ ASSESSMENT AND PLAN:
                     src={additionalIcon} 
                     alt="additional" 
                     className="ml-1"
-                    style={{ width: '20px', height: '20px' }}
+                    style={{ width: '25px', height: '25px' }}
                   />
                 )}
               </div>
@@ -238,7 +238,7 @@ ASSESSMENT AND PLAN:
                     src={additionalIcon} 
                     alt="additional" 
                     className="ml-1"
-                    style={{ width: '20px', height: '20px' }}
+                    style={{ width: '25px', height: '25px' }}
                   />
                 )}
               </div>
