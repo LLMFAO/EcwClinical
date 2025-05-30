@@ -18,37 +18,37 @@ import { Calendar, Phone, Mail, ChevronDown, ChevronLeft, ChevronRight, Search }
 export default function MedicalInterface() {
   const [activeTab, setActiveTab] = useState('progress_note');
   const [searchQuery, setSearchQuery] = useState('');
-  const [content, setContent] = useState(`SUBJECTIVE
- Chief Complaint
- HPI
- Current Medication
- Medical History
- Allergies / Intolerance
- Gyn History
- OB History
- Surgical History
- Hospitalization
- Family History
- Social History
- ROS
+  const [content, setContent] = useState(`SUBJECTIVE:
+ Chief Complaint:
+ HPI:
+ Current Medication:
+ Medical History:
+ Allergies / Intolerance:
+ Gyn History:
+ OB History:
+ Surgical History:
+ Hospitalization:
+ Family History:
+ Social History:
+ ROS:
 
-OBJECTIVE
- Vitals
- Past Results
- Examination
+OBJECTIVE:
+ Vitals:
+ Past Results:
+ Examination:
 
-ASSESSMENT
- Physical Therapy Assessment
- Assessment
+ASSESSMENT:
+ Physical Therapy Assessment:
+ Assessment:
 
-PLAN
- Treatment
- Procedures
- Diagnostic Imaging
- Lab Reports
- Procedure Orders
- Preventative Medicine
- Next Appointment`);
+PLAN:
+ Treatment:
+ Procedures:
+ Diagnostic Imaging:
+ Lab Reports:
+ Procedure Orders:
+ Preventative Medicine:
+ Next Appointment:`);
   const [sessionId] = useState(() => `session_${Date.now()}_${Math.random()}`);
   
   const queryClient = useQueryClient();
@@ -345,37 +345,37 @@ PLAN
  Next Appointment`);
             }}
             onResetData={() => {
-              setContent(`SUBJECTIVE
- Chief Complaint
- HPI
- Current Medication
- Medical History
- Allergies / Intolerance
- Gyn History
- OB History
- Surgical History
- Hospitalization
- Family History
- Social History
- ROS
+              setContent(`SUBJECTIVE:
+ Chief Complaint:
+ HPI:
+ Current Medication:
+ Medical History:
+ Allergies / Intolerance:
+ Gyn History:
+ OB History:
+ Surgical History:
+ Hospitalization:
+ Family History:
+ Social History:
+ ROS:
 
-OBJECTIVE
- Vitals
- Past Results
- Examination
+OBJECTIVE:
+ Vitals:
+ Past Results:
+ Examination:
 
-ASSESSMENT
- Physical Therapy Assessment
- Assessment
+ASSESSMENT:
+ Physical Therapy Assessment:
+ Assessment:
 
-PLAN
- Treatment
- Procedures
- Diagnostic Imaging
- Lab Reports
- Procedure Orders
- Preventative Medicine
- Next Appointment`);
+PLAN:
+ Treatment:
+ Procedures:
+ Diagnostic Imaging:
+ Lab Reports:
+ Procedure Orders:
+ Preventative Medicine:
+ Next Appointment:`);
             }}
           />
         </div>
