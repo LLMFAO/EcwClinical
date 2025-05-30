@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { MedicalHeader } from "@/components/ui/medical-header";
 import { MedicalTabs } from "@/components/ui/medical-tabs";
 import { MedicalBottomMenu } from "@/components/ui/medical-bottom-menu";
+import { UpToDateSection } from "@/components/ui/uptodate-section";
 import ProgressNotePage from "./progress-note-page";
 import ScribePage from "./scribe-page";
 import OrdersPage from "./orders-page";
@@ -378,19 +379,25 @@ PLAN
       
       {/* Main Content Area - Render different pages based on active tab */}
       <div className="flex flex-1" style={{ marginTop: '0px' }}>
-        {activeTab === 'progress_note' && (
-          <ProgressNotePage
-            content={content}
-            onContentChange={handleContentChange}
-            patientInfo={patientInfo}
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-          />
-        )}
-        {activeTab === 'scribe' && <ScribePage />}
-        {activeTab === 'orders' && <OrdersPage />}
+        {/* Left Content Area - 3/4 width */}
+        <div className="w-3/4">
+          {activeTab === 'progress_note' && (
+            <ProgressNotePage
+              content={content}
+              onContentChange={handleContentChange}
+              patientInfo={patientInfo}
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+            />
+          )}
+          {activeTab === 'scribe' && <ScribePage />}
+          {activeTab === 'orders' && <OrdersPage />}
+        </div>
+        
+        {/* Right Sidebar - UpToDate Section - 1/4 width */}
+        <UpToDateSection />
       </div>
       
       <MedicalBottomMenu onMenuAction={handleMenuAction} />
