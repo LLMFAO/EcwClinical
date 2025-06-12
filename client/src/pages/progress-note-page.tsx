@@ -56,54 +56,65 @@ PLAN:
  Preventative Medicine:
  Next Appointment:`;
 
-  const currentData = `CHIEF COMPLAINT: Left ankle pain and swelling after fall
+  const currentData = `Previous visit Summary:
+John York, a 5-year-old male, presented with left ear pain, fever, and fussiness. Physical examination revealed a bulging, erythematous left tympanic membrane with effusion, consistent with acute otitis media. The right ear was normal. Amoxicillin was prescribed for 10 days, with instructions for pain management and follow-up in two weeks. The mother was educated on warning signs and when to seek further medical attention.
+
+CHIEF COMPLAINT: Two-week follow-up for left ear infection and right wrist pain after a fall.
 
 HISTORY OF PRESENT ILLNESS:
-The patient is a 28-year-old female who presents with acute onset left ankle pain and swelling following a fall while jogging yesterday evening. She reports stepping into a pothole and twisting her ankle inward. She immediately felt sharp pain and was unable to bear weight. She applied ice overnight and took ibuprofen but pain persists. She is concerned the ankle may be broken and is requesting X-rays. She denies numbness, tingling, or color changes in the foot.
+John York, a 5-year-old male, presents for a two-week follow-up of his left ear infection. His mother reports that he completed the full course of amoxicillin without issues. Within two days of starting the medication, his fever resolved, ear pain subsided, and he returned to his normal self with improved appetite. He finished the last dose a few days ago and has been symptom-free since.
+
+Two days ago, John fell from the monkey bars at the playground, landing on his outstretched right hand. He cried immediately after the fall and has been complaining of right wrist pain since. His mother notes that he's been favoring his left hand and that there's some swelling in the right wrist. She has been administering ibuprofen for pain relief.
 
 REVIEW OF SYSTEMS:
-Constitutional: Denies fever, chills, or systemic symptoms
-Musculoskeletal: Left ankle pain and swelling as per HPI
-Neurological: Denies numbness or tingling in foot
+CONSTITUTIONAL: Negative for fever or fussiness.
+HEENT: Negative for ear pain, discharge, or other symptoms.
+MUSCULOSKELETAL: Positive for right wrist pain and limited use of right hand.
+NEUROLOGICAL: Negative for tingling or numbness in fingers.
+All other systems reviewed and negative.
 
 PAST MEDICAL HISTORY: 
-None significant
+Recent left acute otitis media (treated with amoxicillin)
 
 MEDICATIONS:
-Ibuprofen 400mg as needed for pain (started yesterday)
+Ibuprofen as needed for wrist pain
 
 ALLERGIES: NKDA
 
 SOCIAL HISTORY:
-Tobacco: Never smoker
-Alcohol: Occasional social drinking
-Exercise: Regular jogger, 3-4 times per week
 
 FAMILY HISTORY:
-Non-contributory
 
 PHYSICAL EXAMINATION:
-Vital Signs: T 98.4°F, BP 118/72, HR 82, RR 16, SpO2 99% RA
-General: Alert, oriented, appears uncomfortable but in no acute distress
-Extremities: Left ankle with moderate swelling and ecchymosis over lateral aspect
-  - Tenderness to palpation over lateral malleolus and anterior talofibular ligament
-  - Range of motion limited by pain
-  - Able to bear partial weight with assistance
-  - No deformity or crepitus
-  - Distal pulses intact, capillary refill <2 seconds
-  - Sensation intact to light touch
+GENERAL: Well-appearing male, cooperative during examination.
+HEENT:
+  Ears:
+    Right: External auditory canal clear, tympanic membrane pearly gray with normal light reflex.
+    Left: Tympanic membrane no longer erythematous or bulging. Some residual fluid noted behind the eardrum.
+MUSCULOSKELETAL:
+  Right wrist: Mild swelling noted. Point tenderness over distal radius. Range of motion limited due to pain. No obvious deformity or bruising.
+  Fingers: Full range of motion. Capillary refill normal.
 
 ASSESSMENT AND PLAN:
-1. Left ankle sprain (suspected lateral ligament injury)
-   - Ottawa ankle rules do not indicate need for X-ray
-   - RICE protocol (Rest, Ice, Compression, Elevation)
-   - Elastic bandage wrap for support
-   - Weight bearing as tolerated with crutches if needed
-   - Follow up in 1 week if not improving
+1. Resolved left otitis media:
+   - Infection has cleared. Residual fluid behind eardrum is expected to resolve over time.
+   - No further treatment needed for the ear at this time.
 
-2. Pain management
-   - Continue ibuprofen 400mg every 6 hours with food
-   - May use acetaminophen for breakthrough pain`;
+2. Right wrist fracture:
+   - X-ray confirms a small buckle (torus) fracture on the right wrist.
+   - Plan:
+     a) Referral to Pediatric Orthopedics specialist sent.
+     b) Orthopedics will likely replace temporary splint with a short arm cast.
+     c) Continue ibuprofen for pain management as needed.
+     d) Orthopedics will determine follow-up schedule and treatment duration.
+
+Patient Instructions:
+1. Keep temporary splint on until seen by Orthopedics.
+2. Continue ibuprofen for pain relief as needed.
+3. Await call from Pediatric Orthopedics office for appointment scheduling (expected within 1-2 days).
+4. Appointment with Orthopedics should occur within the next 1-2 days.
+5. Avoid strenuous activities with the right arm until cleared by Orthopedics.
+6. Return to clinic or seek immediate care if wrist pain worsens, or if any new symptoms develop.`;
 
   const populateWithCurrentData = () => {
     onContentChange(currentData);
