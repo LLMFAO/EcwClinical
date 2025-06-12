@@ -197,6 +197,20 @@ Patient Instructions:
 
     // Show populated content with mixed formatting
     const lines = content.split('\n');
+    
+    // Find the range of the previous visit summary content
+    let summaryStartIndex = -1;
+    let summaryEndIndex = -1;
+    
+    lines.forEach((line, index) => {
+      if (line.includes('Previous visit Summary:')) {
+        summaryStartIndex = index;
+      }
+      if (summaryStartIndex !== -1 && summaryEndIndex === -1 && line.includes('SUBJECTIVE:')) {
+        summaryEndIndex = index;
+      }
+    });
+    
     return (
       <div className="p-4 min-h-[600px]">
         {lines.map((line, index) => {
@@ -204,11 +218,40 @@ Patient Instructions:
             return <div key={index} className="h-4"></div>;
           }
           
-          const isParentSection = !line.startsWith(' ') && line.trim() !== '';
+          const isParentSection = !line.startsWith(' ') && line.trim() !== '' && !line.includes('Previous visit Summary:') && (summaryStartIndex === -1 || index < summaryStartIndex || index >= summaryEndIndex);
           const isChildSection = line.startsWith(' ') && !line.startsWith('  ') && line.trim() !== '';
           const isDataContent = line.startsWith('  ') && line.trim() !== '';
+          const isPreviousVisitSummary = line.includes('Previous visit Summary:');
+          const isPreviousVisitContent = summaryStartIndex !== -1 && index > summaryStartIndex && index < summaryEndIndex && !line.includes('Previous visit Summary:') && line.trim() !== '';
           
-          if (isParentSection) {
+          if (isPreviousVisitSummary) {
+            return (
+              <div 
+                key={index} 
+                className="text-black font-bold mb-2"
+                style={{
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 'bold'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          } else if (isPreviousVisitContent) {
+            return (
+              <div 
+                key={index} 
+                className="text-black mb-4"
+                style={{
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 'normal',
+                  lineHeight: '1.5'
+                }}
+              >
+                {line.trim()}
+              </div>
+            );
+          } else if (isParentSection) {
             return (
               <div 
                 key={index} 
