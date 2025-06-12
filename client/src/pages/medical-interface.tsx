@@ -55,8 +55,8 @@ PLAN:
 
   // Patient info (would normally come from props or context)
   const patientInfo = {
-    name: "ATHELAS, Abraham",
-    dob: "Oct 26, 1990 (33 yo M)",
+    name: "YORK, John",
+    dob: "Dec 15, 2018 (5 yo M)",
     gender: "M",
     accNo: "14044"
   };
@@ -185,7 +185,7 @@ PLAN:
           <div className="flex flex-col text-sm">
             <div className="flex items-center space-x-2 mb-1">
               <span className="text-blue-800 font-medium">{patientInfo.name}</span>
-              <span className="text-gray-600">33 yo</span>
+              <span className="text-gray-600">5 yo</span>
               <span className="text-gray-600">M</span>
               <span className="bg-red-500 text-white px-2 py-0.5 text-xs rounded">INFO</span>
             </div>
