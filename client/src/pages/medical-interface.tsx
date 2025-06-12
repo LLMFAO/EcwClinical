@@ -277,10 +277,7 @@ PLAN:
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             onPopulateData={() => {
-              setContent(`Previous visit Summary:
-John York, a 5-year-old male, presented with left ear pain, fever, and fussiness. Physical examination revealed a bulging, erythematous left tympanic membrane with effusion, consistent with acute otitis media. The right ear was normal. Amoxicillin was prescribed for 10 days, with instructions for pain management and follow-up in two weeks. The mother was educated on warning signs and when to seek further medical attention.
-
-SUBJECTIVE:
+              setContent(`SUBJECTIVE:
  Chief Complaint:
   Two-week follow-up for left ear infection and right wrist pain after a fall.
  HPI:
