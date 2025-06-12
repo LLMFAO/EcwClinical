@@ -56,7 +56,7 @@ PLAN:
   // Patient info (would normally come from props or context)
   const patientInfo = {
     name: "YORK, John",
-    dob: "Dec 15, 2018 (5 yo M)",
+    dob: "Dec 15, 2019 (5 yo M)",
     gender: "M",
     accNo: "14044"
   };
@@ -449,7 +449,7 @@ PLAN:
           {/* Patient Info Banner */}
           <div className="bg-orange-100 border-l-4 border-orange-500 p-2 text-xs">
             <div className="font-bold text-orange-800">YORK, John</div>
-            <div className="text-orange-700">Dec 15, 2018 (5 yo M) | Acc No. 14044</div>
+            <div className="text-orange-700">Dec 15, 2019 (5 yo M) | Acc No. 14044</div>
           </div>
           
           {/* Content Sections */}
